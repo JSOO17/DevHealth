@@ -45,9 +45,9 @@
                             <i class="fa fa-lock fa-lg fa-fw" aria-hidden="true"></i>
                         </span>
                         <div class="wraper__form-remember-me">
-                            <a href="http://localhost/devhealth-GL/Vista/html/recordarContraseña.php">Olvidé mi contraseña</a>
+                            <a href="http://localhost/Devhealth/Vista/html/recordarContraseña.php">Olvidé mi contraseña</a>
                         </div>
-                        <a href="http://localhost/devhealth-GL/Vista/html/registrarPersona.php"><input class="wraper__form-button" value="Registrarse"></input></a>
+                        <a href="http://localhost/Devhealth/Vista/html/registrarPersona.php"><input class="wraper__form-button" value="Registrarse"></input></a>
                         <button class="wraper__form-button">Iniciar</button>
                     </form>
                 </section>  
