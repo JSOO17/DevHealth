@@ -17,4 +17,5 @@ mix.js('resources/js/app.js', 'public/js')
 
 mix.styles([
     'resources/css/login.css',
+    'resources/css/style.css',
 ], 'public/css/all.css');
