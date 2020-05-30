@@ -12,9 +12,8 @@
     <!-- SweetAlert -->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
-<body>
+<body style="background-color:#0EA8E5;">
 <div class="contenedor">
-    <img src="../img/4.jpeg" class="container__fondo">
     <div class="container">
         <div class="row">
             <div class="col">
