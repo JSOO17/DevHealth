@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace DevHealth\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Http\Requests\StorePostRequest;
+use DevHealth\Http\Requests\StorePostRequest;
 
-use App\Post;
+use DevHealth\Post;
 
 class PostController extends Controller
 {
@@ -17,12 +17,8 @@ class PostController extends Controller
      */
     public function index(Request $request)
     {
-
-        if($request->user()){
-            $posts =  Post::orderBy('id', 'desc')->simplePaginate(20);
-            return view('posts.index', ['posts' => $posts]);
-        }
-        
+        $posts =  Post::orderBy('id', 'desc')->simplePaginate(20);
+        return view('posts.index', ['posts' => $posts]);
         
         abort(401, 'this action is unauthorized');
     }

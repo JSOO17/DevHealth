@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Livewire;
+namespace DevHealth\Http\Livewire;
 
 use Livewire\Component;
 
-use App\Comment;
+use DevHealth\Comment;
 
 class Comments extends Component
 {

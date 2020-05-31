@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace DevHealth\Http\Controllers;
 
-use App\Http\Controllers\Controller;
+use DevHealth\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Repositories\UserRepository;
-use App\User;
+use DevHealth\Repositories\UserRepository;
+use DevHealth\User;
 
 class UserController extends Controller
 {

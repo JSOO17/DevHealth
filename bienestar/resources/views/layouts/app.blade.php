@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'DevHealth') }}</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -44,8 +44,7 @@
             <!-- Nombre de equipo-->
             <div class="container">
                 <a class="navbar-brand text-white" style="font-size: 200%;" href="index.php">
-                    {{ config('app.name', 'Laravel') }}
-                </a>
+                    DevHealth                </a>
             
               <!-- Boton del toggle -->
               <button class="navbar-toggler border-white" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -56,13 +55,12 @@
 
                     <!-- Opciones de menú--> 
                     <div class="navbar-nav " style="">
-                        @livewire('buttons')
-                        <a class="nav-link text-white" id="principal" href="#">Principal</a>
-                        <a class="nav-link text-white" id="orientacionAlSer" href="#">Orientación al ser</a>
-                        <a class="nav-link text-white" id="culturaFisica" href="#">Cultura fisica</a>
-                        <a class="nav-link text-white" id="arte" href="#">Arte</a>
-                        <a class="nav-link text-white" id="salud" href="#">Salud</a>
-                        <a class="nav-link text-white" id="belleza" href="#">Belleza</a>
+                        <a class="nav-link text-white" id="principal" href="/">Home</a>
+                        <a class="nav-link text-white" id="orientacionAlSer" href="/category/orientation to being">Orientation to being</a>
+                        <a class="nav-link text-white" id="culturaFisica" href="/category/physical Culture">Physical Culture</a>
+                        <a class="nav-link text-white" id="arte" href="/category/art">Art</a>
+                        <a class="nav-link text-white" id="salud" href="/category/health">Health</a>
+                        <a class="nav-link text-white" id="belleza" href="/category/beauty">Beauty</a>
                     </div>
 
                     <!-- Boton de opciones-->
@@ -71,11 +69,11 @@
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                <a class="nav-link text-white" href="{{ route('login') }}">{{ __('Login') }}</a>
                             </li>
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link text-white" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li>
                             @endif
                         @else

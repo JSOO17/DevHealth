@@ -1,17 +1,16 @@
 @extends('layouts.app')
 
 @section('estilos')
-<link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-<!--FontAwesome-->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
-<!-- SweetAlert -->
-<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="css/login.css">
+    <!--FontAwesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <!-- SweetAlert -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 @endsection
 
 @section('content')
 <div class="contenedor">
-    <img src="../img/4.jpeg" class="container__fondo">
     <div class="container">
         <div class="row">
             <div class="col">
@@ -55,7 +54,7 @@
                         <div><button type="submit" class="wraper__form-button">{{ __('Register') }}</button></div>
                         
                     </form>  
-                </section>  
+                </section> 
             </div>
         </div>
     </div>

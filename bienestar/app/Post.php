@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace DevHealth;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -10,14 +10,14 @@ class Post extends Model
 {
     public function user()
     {
-    	return $this->belongsTo('App\User');
+    	return $this->belongsTo('DevHealth\User');
     }
     public function comments()
     {
-    	return $this->hasMany('App\Comment');
+    	return $this->hasMany('DevHealth\Comment');
     }
     public function categorie()
     {
-    	return $this->belongsTo('App\Categorie');
+    	return $this->belongsTo('DevHealth\Categorie');
     }
 }

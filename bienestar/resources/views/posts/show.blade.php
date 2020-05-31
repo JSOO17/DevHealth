@@ -20,14 +20,30 @@
           </blockquote>
           <div class="my-3">
             <p>Comentarios</p>
-            @foreach($post->comments as $comment)
-            <div class="border border-white">
-              <h6>{{$comment->name}}</h6>
-              <p Class="p-2">{{$comment->content}}</p>
-            </div>
-            @endforeach
+            @if($post->comments)
+              @foreach($post->comments as $comment)
+              <div class="border border-white">
+                <h6>{{$comment->name}}</h6>
+                <small>{{$comment->created_at}}</small>
+                <p class="p-2">{{$comment->content}}</p>
+              </div>
+              @endforeach
+            @else
+              <p Class="p-2">There aren´t comments</p>
+            @endif
           </div>
-        </div>
+          <form method="POST" action="/comments/store">
+          @csrf
+          <div class="form-group">
+            <input class="form-control" type="text" name="name" placeholder="Name"></input>
+          </div>
+          <div class="form-group">
+            <textarea class="form-control" name="comment" rows="5" placeholder="Write..."></textarea>
+          </div>
+            <input type="hidden" name="post_id" value="{{ $post->id }}">
+            <button class="btn btn-primary" type="submit" >Comentar</button>
+          </form>
+          </div>
 
        
     </div>
