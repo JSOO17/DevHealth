@@ -1,8 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace DevHealth\Http\Controllers;
 
 use Illuminate\Http\Request;
+
+use DevHealth\Http\Requests\StorePostRequest;
+
+use DevHealth\Post;
 
 class PostController extends Controller
 {
@@ -11,9 +15,12 @@ class PostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+        $posts =  Post::orderBy('id', 'desc')->simplePaginate(20);
+        return view('posts.index', ['posts' => $posts]);
+        
+        abort(401, 'this action is unauthorized');
     }
 
     /**
@@ -23,7 +30,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        //
+        return view('posts.create');
     }
 
     /**
@@ -32,9 +39,21 @@ class PostController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StorePostRequest $request)
     {
-        //
+        if ($request->hasFile('imagen')) {
+            $file = $request->file('imagen');
+            $name = time() . $file->getClientOriginalName();
+            $file->move(public_path().'/images/',$name);
+            $post = new Post();
+            $post->title = $request->input('title');
+            $post->content = $request->input('content');
+            $post->pathImg = $name;
+            $post->categorie_id = $request->input('categorie_id');
+            $post->user_id = $request->input('user_id');
+            $post->save();
+            return redirect()->route('home')->with('status', 'Hiciste una publiación correctamente');
+        }
     }
 
     /**
@@ -45,7 +64,8 @@ class PostController extends Controller
      */
     public function show($id)
     {
-        //
+        $post = Post::where('id', $id)->first();
+        return view('posts.show', compact('post'));
     }
 
     /**
@@ -68,7 +88,7 @@ class PostController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        return 'actualiazr';
     }
 
     /**

@@ -1,0 +1,322 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+
+
+.contenedor{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #0EA8E5;
+}
+
+.container__fondo{
+    /* flex-wrap: wrap;
+    max-width: 100%; */
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    position: absolute;
+}
+
+.wraper{
+    flex-wrap: wrap;
+    max-width: 500px;
+    min-height: 80vh;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    box-shadow: 2px 10px 14px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    text-align: center;
+    transition: all 0.25s; 
+    background-color: #2D3E50;
+    display: flex;
+    justify-content: center;
+    /* align-items: baseline; */
+}
+
+.card__img{
+    width: 100%;
+    height: 30vh;
+    object-fit: cover;
+    position: relative;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+
+.wraper__title{
+    position: absolute;
+    font-size: 70px;
+    top: 220px;
+    left: 26%;
+}
+
+.wraper__icono3{
+    position: absolute;
+    color: #fff;
+    font-size: 30px;
+    top: 306px;
+    left: 44%;
+}
+
+.wraper__title2{
+    color: #fff;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+
+.wraper__form-input{
+    border: 2px solid #344755;
+    border-radius: 25px;
+    font-family: 'Bell MT', sans-serif;
+    font-size: 16px;
+    margin-bottom: 20px;
+    padding: 0px 20px;
+    outline: none;
+    height: 45px;
+    width: 300px;
+    background-color: #212F3C;
+    color: white;
+}
+
+.wraper__form-inputF{
+    border: 2px solid #344755;
+    border-radius: 25px;
+    font-family: 'Bell MT', sans-serif;
+    font-size: 16px;
+    margin-bottom: 20px;
+    padding: 0px 20px;
+    outline: none;
+    height: 45px;
+    width: 300px;
+    background-color: #212F3C;
+    color: white;
+}
+
+.wraper__form-button{
+    background-color: #fff;
+    border-radius: 25px;
+    border: none;
+    text-align: center;
+    color: #2D3E50;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    height: 45px;
+    width: 130px;
+    margin-bottom: 30px;
+}
+
+.wraper__icono input[type="text"] {
+    padding-left: 40px;
+  }
+.wraper__icono {
+    position: relative;
+  }
+.wraper__icono i {
+    position: absolute;
+    left: 5px;
+    margin-top: 4px;
+    margin-bottom: 4px;   
+    padding: 9px;
+    color: #fff;
+    transition: 0.3s;
+    font-size: 22px;
+}
+.wraper__icono2 input[type="password"] {
+    padding-left: 40px;
+  }
+.wraper__icono2 {
+    position: relative;
+  }
+.wraper__icono2 i {
+    position: absolute;
+    left: 5px;
+    margin-top: 4px;
+    margin-bottom: 4px;   
+    padding: 9px;
+    color: #fff;
+    transition: 0.3s;
+    font-size: 22px;
+}
+
+.wraper__form-remember-me {
+    color: #9A9995;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.wraper__form-remember-me a {
+    color: #9A9995;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.wraper__form-remember-me a:hover {
+    text-decoration: underline;
+}
+body{
+    margin-left: 35%;
+}
+.container{
+    background-repeat: no-repeat;
+    background-image: url('../img/LOGIN-FONDO2.jpg');
+    box-shadow: 5px 9px 30px 3px #324855;
+    height: 34%;
+    margin-top: 7%;
+    box-shadow: 4%;
+    border-left: solid;
+    border-right: solid;
+    border-top: solid; 
+    font-family: Book Antiqua;
+    text-align: center;
+    padding-top: 10%;
+}
+.contenedor{
+    box-shadow: 0px 15px 35px 13px #324855;
+    width: 350px;
+    height: 36%;
+    background-color: #2D3E50;
+    align-items: center;
+    border-left: solid;
+    border-right: solid;
+    border-bottom: solid;
+    padding-top: 1%;
+    font-weight: 100%;
+    font-family: Book Antiqua;
+    text-align: center;
+}
+.name{
+    width: 220px;
+    font-size: 14px;
+    border-radius: 15px;
+    background-color: #2D2D35;
+    border: 1px solid #2D2D35;
+    padding: 1%;
+    padding-left: 20%;
+    background-size: 20px;
+}
+.button{
+    width: 28%;
+    border-radius: 15px;
+    border: solid;
+}
+.p{
+    font-size: 13px;
+    color: darkgrey;
+}
+.pp{
+    font-size: 13px;
+    margin-left: 0%;
+    color: darkgrey;
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.contenedor{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.container__fondo{
+    /* flex-wrap: wrap;
+    max-width: 100%; */
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    position: absolute;
+    backdrop-filter: blur(20px);
+}
+
+.wraper{
+    flex-wrap: wrap;
+    max-width: 500px;
+    min-height: 40vh;
+    position: relative;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    box-shadow: 2px 10px 14px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    text-align: center;
+    transition: all 0.25s; 
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    padding-top: 3%;
+    /* align-items: baseline; */
+}
+
+.wraper__title{
+    position: absolute;
+    font-size: 70px;
+    top: 220px;
+    left: 26%;
+}
+
+.wraper__title2{
+    color: #fff;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 40px;
+    text-align: center;
+}
+
+.wraper__form-input{
+    border: 2px solid #344755;
+    border-radius: 25px;
+    font-family: 'Bell MT', sans-serif;
+    font-size: 16px;
+    margin-bottom: 20px;
+    padding: 0px 20px;
+    outline: none;
+    height: 45px;
+    width: 280px;
+    background-color: #fff;
+    color: #344755;
+}
+
+.wraper__form-button{
+    background-color: #2D3E50;
+    border-radius: 25px;
+    border: none;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    height: 45px;
+    width: 130px;
+    margin-bottom: 15px;
+}
+
+.wraper__icono input[type="text"] {
+    padding-left: 40px;
+  }
+.wraper__icono {
+    position: relative;
+  }
+.wraper__icono i {
+    position: absolute;
+    left: 5px;
+    margin-top: 4px;
+    margin-bottom: 4px;   
+    padding: 9px;
+    color: #2D3E50;
+    transition: 0.3s;
+    font-size: 22px;
+}

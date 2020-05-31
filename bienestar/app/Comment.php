@@ -1,10 +1,13 @@
 <?php
 
-namespace App;
+namespace DevHealth;
 
 use Illuminate\Database\Eloquent\Model;
 
 class Comment extends Model
 {
-    //
+    public function post()
+    {
+    	return $this->belongsTo('DevHealth\Post');
+    }
 }
